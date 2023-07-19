@@ -1,0 +1,22 @@
+{% extends 'template.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2>My Friendly Login Page</h2>
+        {% if error %}
+            <p>Invalid user details</p>
+        {% endif %}
+        <form class="form" action="/login" method="post">
+            <label for="user">Username:</label>
+            <input id="user" type="text" name="username">
+            <br>
+            <label for="pass">Password:</label>
+            <input id="pass" type="password" name="password">
+            <input id="submit" type="submit" value="Submit">
+        </form>
+        {% if name %}
+            <h1>{{name}}</h1>
+        {% endif %}
+        <!-- <p>Lolio</p> -->
+    </div>
+{% endblock %}
